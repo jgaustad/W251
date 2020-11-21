@@ -1,0 +1,13 @@
+# FROM nvcr.io/nvidia/l4t-ml:r32.4.2-py3
+FROM nvcr.io/nvidia/l4t-ml:r32.4.3-py3
+
+# tested on Jetson NX
+
+# Change working directory
+WORKDIR /data
+
+# Install dependencies (pip or conda)
+
+RUN apt update && apt install -y libffi-dev python3-pip python3-tk libopencv-dev python3-opencv 
+RUN pip3 install paho-mqtt
+
